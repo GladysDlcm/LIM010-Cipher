@@ -37,14 +37,14 @@ El objetivo es el de mantener la confidencialidad de los datos del paciente. Sol
 Las pruebas de VIH requieren confidencialidad para proteger la identidad del paciente. Para esto el proyecto nos permitira cifrar los datos.
 
 
-### Prottotipo en papel
+### Prototipo en papel
 
 
 ### Feedback
 
-Deberás maquetar de forma exacta el prototipo final que hiciste en balsamiq utilizando
-HTML5 y CSS3. En este momento elegirás los colores, tipo de fuente, etc a usar.
+En el feedback realizado se indico que se organize con más detalle la segunda pantalla de cifrar y decifrar para que el usuario pueda identificar mejor el objetivo del proyecto.
 
 
 ### Prototipo en Balsamiq
-
+![Pantalla_1](Pantalla_1.png)
+![Pantalla_1](Pantalla_2.png)
