@@ -111,3 +111,55 @@ input:not([type="bottom"]),
 textarea,
 select {
     padding-top: .5rem;
+    padding-bottom: .5rem;
+    display: block;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 35px;
+    color: #838386;
+    background-color: #f2f3f9;
+    border: 0 solid #f2f3f9;
+}
+select {
+    /*-webkit-appearance: none;
+    appearance: none;*/
+    padding-left: 1rem;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+textarea {
+    height: 5rem;
+    resize: none;
+}
+::placeholder {
+    font-weight: 300;
+    color: #838386;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+  }
+
+/* Footer */
+.site-footer {
+    width: 95%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+    
+}
+@media (min-width: 768px) {
+    .site-footer {
+        display: block;
+        flex: 0 0 auto;
+    }
+}
