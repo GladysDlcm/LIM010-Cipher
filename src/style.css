@@ -1,1 +1,113 @@
-/* Acá van tus reglas de estilo */
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    line-height: 2;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Oswald', sans-serif;
+    color: #838386;
+    font-size: 40px;
+}
+
+h2 {
+    color: #838386;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: lighter;
+    font-family: 'Oswald', sans-serif;
+}
+  
+h3 {
+    color: #666666;
+    font-size: 13px;
+    text-align: center;
+    font-weight: lighter;
+    font-family: 'Lato', sans-serif;
+}
+P{
+	text-align:center;
+}
+.contenedor {
+    display: block;
+    width: 95%;;
+    margin: 0 auto;
+    justify-content: center;
+}
+.centrar {
+    max-width: 400px;
+}
+.site-header {
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+}
+/* Botones */
+.boton {
+    color: #ffffff;
+    background-color: #008ae3;
+    border-color: #008ae3;
+    font-weight: 400;
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1rem;
+    padding: .9rem 3rem;
+    margin-top:0.1rem;
+    display: inline-block;
+    text-align: center;
+    border-radius: 35px;
+    border: none;
+    display: block;
+    flex: 0 0 100%;
+}
+@media (min-width: 768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+.boton:hover {
+    cursor: pointer;
+}
+.btn {
+    width: 100%;
+}
+.btn_cifrado {
+    width: 45%;
+    float: left;
+    margin-bottom: 2rem;
+}
+.btn_decifrado {
+    float: right;
+    width: 45%;
+    margin-bottom: 2rem;
+}
+.btn_borrar {
+    width: 40%;
+    float: right;
+}
+@media (min-width: 768px) {
+    .btn_cifrado .btn_decifrado {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+}
+/* Formulario */
+label {
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+}
+input:not([type="bottom"]),
+textarea,
+select {
+    padding-top: .5rem;
