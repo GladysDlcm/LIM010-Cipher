@@ -39,6 +39,7 @@ Las pruebas de VIH requieren confidencialidad para proteger la identidad del pac
 
 ### Prototipo en papel
 
+![boceto](boceto.jpg)
 
 ### Feedback
 
