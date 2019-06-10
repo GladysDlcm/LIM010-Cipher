@@ -68,6 +68,7 @@ P{
     border: none;
     display: block;
     flex: 0 0 100%;
+    outline: transparent;
 }
 @media (min-width: 768px) {
     .boton {
@@ -81,22 +82,28 @@ P{
 .btn {
     width: 100%;
 }
-.btn_cifrado {
+.btn-cifrado {
     width: 45%;
     float: left;
     margin-bottom: 2rem;
 }
-.btn_decifrado {
+.btn-decifrado {
     float: right;
     width: 45%;
     margin-bottom: 2rem;
 }
-.btn_borrar {
-    width: 40%;
+.btn-borrar {
+    width: 45%;
     float: right;
 }
+.btn-cerrar {
+    width: 45%;
+    float: left;
+    background-color: #838386;
+    border-color: #838386;
+}
 @media (min-width: 768px) {
-    .btn_cifrado .btn_decifrado {
+    .btn-cifrado .btn-decifrado {
         display: inline-block;
         flex: 0 0 auto;
     }
@@ -123,6 +130,7 @@ select {
     color: #838386;
     background-color: #f2f3f9;
     border: 0 solid #f2f3f9;
+    outline: transparent;
 }
 select {
     /*-webkit-appearance: none;
@@ -153,7 +161,7 @@ textarea {
     width: 95%;
     max-width: 500px;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 80px;
     text-align: center;
     
 }

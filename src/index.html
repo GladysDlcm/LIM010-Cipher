@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Secret Lab</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Oswald:300,400,500,700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -12,23 +13,23 @@
     </header>
     <main class="contenedor centrar">
       <!--Pantalla Login-->
-      <div class="centrar" id="pantalla_login">
-        <form action="">
+      <div class="centrar" id="pantalla-login">
+        <form>
           <input type="text" id="usuario"
           placeholder="Usuario"/>
           <input type="password" id="password" 
-          placeholder="Contraseña"/>
-          <button class="btn boton" type="button" id="btn_enviar">Iniciar sesión</button>
+          placeholder="Contraseña" value="LABORATORIA"/>
+          <button class="btn boton" type="button" id="btn-enviar">Iniciar sesión</button>
           <p id="error"></p>
         </form>
       </div>
       <!--Pantalla Cifrado-->
-      <div class="centrar hide" id="pantalla_cifrado">
-        <h2 id="hola_usuario">Bienvenido</h2>
-          <form action="">
-            <textarea id="" placeholder="Ingresar datos del paciente."></textarea>
+      <div class="centrar hide" id="pantalla-cifrado">
+        <h2 id="hola-usuario">Bienvenido</h2>
+          <form>
+            <textarea id="datos" placeholder="Ingresar datos del paciente."></textarea>
             <!--<label for="opciones">Mes de solicitud</label>-->
-            <select id="opciones">
+            <select id="offset">
               <option value="" disabled selected>Mes de solicitud</option>
               <option value="1">Enero</option>
               <option value="2">Febrero</option>
@@ -44,12 +45,14 @@
               <option value="12">Diciembre</option>
             </select>
             <div>
-              <button class="boton btn_cifrado" type="button" id="">Cifrar</button>
-              <button class="boton btn_decifrado" type="button" id="">Decifrar</button>
+              <button class="boton btn-cifrado" type="button" id="cifrar">Cifrar</button>
+              <button class="boton btn-decifrado" type="button" id="decifrar">Decifrar</button>
             </div>
-            <textarea id="" placeholder="Código generado."></textarea>
-              <button class="boton btn btn_borrar" type="button" id="">Limpiar</button>
-              <p>El código se ha generado con exito.</p>
+            <textarea id="resultado" placeholder="Código generado."></textarea>
+              <p id="mensaje"></p>
+              <button class="boton btn btn-cerrar" type="button" id="cerrar">Cerrar</button>
+              <button class="boton btn btn-borrar" type="button" id="borrar">Borrar</button>
+              
           </form>  
       </div>
     </main>
