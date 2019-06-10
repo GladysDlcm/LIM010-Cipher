@@ -49,4 +49,4 @@ En el feedback realizado se indico que se organize con más detalle la segunda p
 ### Prototipo en Balsamiq
 
 ![Pantalla_1](Pantalla_1.png)
-![Pantalla_1](Pantalla_2.png)
+![Pantalla_2](Pantalla_2.png)
