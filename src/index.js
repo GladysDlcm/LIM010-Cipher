@@ -8,6 +8,14 @@ const btnBorrar = document.getElementById('borrar');
 const btnCerrar = document.getElementById('cerrar');
 let intentos = 0;
 
+password.addEventListener('keypress', (e) => {
+    if (e.keyCode == 13) {  
+    const nombre = usuario.value;
+    document.getElementById('hola-usuario').innerHTML = 'Bienvenido ' + nombre + ', los datos que ingresaras serán confidenciales.';
+    document.getElementById('pantalla-login').classList.add('hide');
+    document.getElementById('pantalla-cifrado').classList.remove('hide');
+    }
+});
 
 //Funcionalidad Login
 btnEnviar.addEventListener('click', () => {
