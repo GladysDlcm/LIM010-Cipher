@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <title>Secret Lab</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Oswald:300,400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image" href="img/favicon.png">
   </head>
   <body>
     <header class="site-header contenedor centrar">
-      <h1>SECRET LAB</h1>
+      <img class="logo" src="img/logo-secretlab.png" alt="Logo">
     </header>
     <main class="contenedor centrar">
       <!--Pantalla Login-->
-      <div class="centrar" id="pantalla-login">
+      <div class="centrar login" id="pantalla-login">
         <form>
           <input type="text" id="usuario"
           placeholder="Usuario"/>
           <input type="password" id="password"
-          placeholder="Contraseña" value="LABORATORIA"/>
+          placeholder="Contraseña"/>
           <button class="btn boton" type="button" id="btn-enviar">Iniciar sesión</button>
           <p id="error"></p>
         </form>
       </div>
       <!--Pantalla Cifrado-->
-      <div class="centrar hide" id="pantalla-cifrado">
-        <h2 id="hola-usuario">Bienvenido</h2>
+      <div class="centrar cifrado hide" id="pantalla-cifrado">
+        <h1 id="hola-usuario">Bienvenido</h1>
           <form>
             <textarea id="datos" placeholder="Ingresar datos del paciente."></textarea>
-            <!--<label for="opciones">Mes de solicitud</label>-->
             <select id="offset">
               <option value="" disabled selected>Mes de solicitud</option>
               <option value="1">Enero</option>
@@ -50,13 +51,13 @@
             </div>
             <textarea id="resultado" placeholder="Código generado."></textarea>
               <p id="mensaje"></p>
+            <div>
               <button class="boton btn btn-cerrar" type="button" id="cerrar">Cerrar</button>
               <button class="boton btn btn-borrar" type="button" id="borrar">Borrar</button>
-              
+            </div>
           </form>  
       </div>
     </main>
-
     <footer class="site-footer contenedor centrar">
       <h3>Copyright © 2019 All Rights Reserved. Developed by Gladys Dlc Merello.</h3>
     </footer>

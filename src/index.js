@@ -8,15 +8,15 @@ const btnBorrar = document.getElementById('borrar');
 const btnCerrar = document.getElementById('cerrar');
 let intentos = 0;
 
+//Enter Login
 password.addEventListener('keypress', (e) => {
     if (e.keyCode == 13) {  
     const nombre = usuario.value;
-    document.getElementById('hola-usuario').innerHTML = 'Bienvenido ' + nombre + ', los datos que ingresaras serán confidenciales.';
+    document.getElementById('hola-usuario').innerHTML = `Bienvenido  ${nombre} , los datos que ingresaras serán confidenciales.`;
     document.getElementById('pantalla-login').classList.add('hide');
     document.getElementById('pantalla-cifrado').classList.remove('hide');
     }
 });
-
 //Funcionalidad Login
 btnEnviar.addEventListener('click', () => {
 const nombre = usuario.value;
@@ -30,7 +30,7 @@ const passIngreso = password.value;
     }
     else {      //Contraseña correcta ingresar
         if (passIngreso == 'LABORATORIA') {   
-            document.getElementById('hola-usuario').innerHTML = 'Bienvenido ' + nombre + ', los datos que ingresaras serán confidenciales.';
+            document.getElementById('hola-usuario').innerHTML = `Bienvenido  ${nombre} , los datos que ingresaras serán confidenciales.`;
             document.getElementById('pantalla-login').classList.add('hide');
             document.getElementById('pantalla-cifrado').classList.remove('hide');
         }
@@ -45,7 +45,6 @@ const passIngreso = password.value;
         intentos++;  //Cuenta intentos
     }  
 });
-
 //Boton cifrar
 btnCifrar.addEventListener('click', () => {
     let numeroMes = document.getElementById('offset').value;
@@ -53,7 +52,6 @@ btnCifrar.addEventListener('click', () => {
     document.getElementById('resultado').innerHTML = cipher.encode(parseInt(numeroMes), datosPaciente);
     document.getElementById('mensaje').innerHTML= 'El código se ha generado con exito.';
 });
-
 //Boton decifrar
 btnDecifrar.addEventListener('click', () => {
     let numeroMes = document.getElementById('offset').value;
@@ -61,13 +59,11 @@ btnDecifrar.addEventListener('click', () => {
     document.getElementById('resultado').innerHTML = cipher.decode(parseInt(numeroMes), datosPaciente);
     document.getElementById('mensaje').innerHTML= 'El código se ha generado con exito.';
 });
-
 //Boton borrar
 btnBorrar.addEventListener('click', () => {
     document.getElementById('resultado').innerHTML = '';
     document.getElementById('mensaje').innerHTML= ''; 
 });
-
 //Boton cerrar
 btnCerrar.addEventListener('click', () => {
     location.reload(true);

@@ -6,27 +6,20 @@ html {
 body {
     font-family: 'Oswald', sans-serif;
     font-size: 15px;
-    line-height: 2;
-    /*background-image: url(background-secretlab.jpg);*/
+    line-height: 1.3rem;
+    background-image: url(img/bg.jpg);
+    background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
 }
 h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-family: 'Oswald', sans-serif;
-    color: #838386;
-    font-size: 40px;
-}
-
-h2 {
     color: #838386;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 1.5rem;
     text-align: center;
     font-weight: lighter;
     font-family: 'Oswald', sans-serif;
 }
-  
 h3 {
     color: #666666;
     font-size: 13px;
@@ -35,20 +28,40 @@ h3 {
     font-family: 'Lato', sans-serif;
 }
 P{
-	text-align:center;
+    text-align:center;
+    color: #666666;
 }
 .contenedor {
     display: block;
-    width: 95%;;
+    width: 95%;
     margin: 0 auto;
     justify-content: center;
 }
 .centrar {
     max-width: 400px;
 }
+.logo {
+    width: 95%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+.login {
+    background-color: #e4e4e2db;
+    padding: 30px 35px;
+    border-radius: 8px;
+    box-shadow: 6px 6px 8px 0px rgba(122,122,122,1);
+}
+.cifrado {
+    background-color:  #e4e4e2db;
+    padding: 25px 15px 80px 15px;
+    border-radius: 8px;
+    box-shadow: 6px 6px 8px 0px rgba(122,122,122,1);
+}
 .site-header {
     margin: 0 auto;
-    padding: 10px;
+    padding: 30px 15px;
     text-align: center;
 }
 /* Botones */
@@ -153,7 +166,6 @@ textarea {
     font-family: 'Lato', sans-serif;
     text-align: center;
 }
-
 .hide {
     display: none;
   }
@@ -163,7 +175,7 @@ textarea {
     width: 95%;
     max-width: 500px;
     margin: 0 auto;
-    padding-top: 80px;
+    padding-top: 50px;
     text-align: center;
     
 }
