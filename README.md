@@ -20,7 +20,8 @@ Se realizará una aplicación web que permita cifrar los datos del paciente, par
 
 ## Imagen del proyecto
 
-
+![pantalla_01](img_readme/pantalla_01.jpg)
+![pantalla_02](img_readme/pantalla_02.jpg)
 
 ## Investigación UX
 
@@ -39,7 +40,7 @@ Las pruebas de VIH requieren confidencialidad para proteger la identidad del pac
 
 ### Prototipo en papel
 
-![boceto](img-readme/boceto.jpg)
+![boceto](img_readme/boceto.jpg)
 
 ### Feedback
 
@@ -48,5 +49,5 @@ En el feedback realizado se indico que se organize con más detalle la segunda p
 
 ### Prototipo en Balsamiq
 
-![Pantalla_1](img-readme/Pantalla_1.png)
-![Pantalla_2](img-readme/Pantalla_2.png)
+![prototipo_01](img_readme/prototipo_01.jpg)
+![prototipo_02](img_readme/prototipo_02.jpg)

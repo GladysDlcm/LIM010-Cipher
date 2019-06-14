@@ -61,6 +61,8 @@ btnDecifrar.addEventListener('click', () => {
 });
 //Boton borrar
 btnBorrar.addEventListener('click', () => {
+    document.getElementById('offset').value = '';
+    document.getElementById('datos').value = '';
     document.getElementById('resultado').innerHTML = '';
     document.getElementById('mensaje').innerHTML= ''; 
 });
