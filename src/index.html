@@ -1,70 +1,71 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8">
-    <title>Secret Lab</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/1d89626b25.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-  </head>
-  <body>
-    <header class="site-header contenedor centrar">
-      <img class="logo" src="img/logo-secretlab.png" alt="Logo">
-    </header>
-    <main class="contenedor centrar">
-      <!--Pantalla Login-->
-      <div class="centrar login" id="pantalla-login">
-        <form>
-          <i class="fas fa-user"></i>
-          <input type="text" id="usuario"
-          placeholder="Usuario"/>
-          <i class="fas fa-lock"></i>
-          <input type="password" id="password"
-          placeholder="Contraseña"/>
-          <button class="btn boton" type="button" id="btn-enviar">Iniciar sesión</button>
-          <p id="error"></p>
-        </form>
-      </div>
-      <!--Pantalla Cifrado-->
-      <div class="centrar cifrado hide" id="pantalla-cifrado">
-        <h1 id="hola-usuario">Bienvenido</h1>
-          <form>
-            <textarea id="datos" placeholder="Ingresar datos del paciente."></textarea>
-            <select id="offset">
-              <option value="" disabled selected>Mes de solicitud</option>
-              <option value="1">Enero</option>
-              <option value="2">Febrero</option>
-              <option value="3">Marzo</option>
-              <option value="4">Abril</option>
-              <option value="5">Mayo</option>
-              <option value="6">Junio</option>
-              <option value="7">Julio</option>
-              <option value="8">Agosto</option>
-              <option value="9">Setiembre</option>
-              <option value="10">Octubre</option>
-              <option value="11">Noviembre</option>
-              <option value="12">Diciembre</option>
-            </select>
-            <div>
-              <button class="boton btn-cifrado" type="button" id="cifrar">Cifrar</button>
-              <button class="boton btn-decifrado" type="button" id="decifrar">Decifrar</button>
-            </div>
-            <textarea id="resultado" placeholder="Código generado."></textarea>
-              <p id="mensaje"></p>
-            <div>
-              <button class="boton btn btn-cerrar" type="button" id="cerrar">Cerrar</button>
-              <button class="boton btn btn-borrar" type="button" id="borrar">Borrar</button>
-            </div>
-          </form>  
-      </div>
-    </main>
-    <footer class="site-footer contenedor centrar">
-      <h3>Copyright © 2019 All Rights Reserved. Developed by Gladys Dlc Merello.</h3>
-    </footer>
-    <script src="cipher.js"></script>
-    <script src="index.js"></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <title>Secret Lab</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1d89626b25.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+  <header class="site-header contenedor centrar">
+    <img class="logo" src="img/logo-secretlab.png" alt="Logo">
+  </header>
+  <main class="contenedor centrar">
+    <!--Pantalla Login-->
+    <div class="centrar login" id="pantalla-login">
+      <form>
+        <i class="fas fa-user"></i>
+        <input type="text" id="usuario" placeholder="Usuario" />
+        <i class="fas fa-lock"></i>
+        <input type="password" id="password" placeholder="Contraseña" />
+        <button class="btn boton" type="button" id="btn-enviar">Iniciar sesión</button>
+        <p id="error"></p>
+      </form>
+    </div>
+    <!--Pantalla Cifrado-->
+    <div class="centrar cifrado hide" id="pantalla-cifrado">
+      <h1 id="hola-usuario">Bienvenido</h1>
+      <form>
+        <textarea id="datos" placeholder="Ingresar datos del paciente."></textarea>
+        <select id="offset">
+          <option value="" disabled selected>Mes de solicitud</option>
+          <option value="1">Enero</option>
+          <option value="2">Febrero</option>
+          <option value="3">Marzo</option>
+          <option value="4">Abril</option>
+          <option value="5">Mayo</option>
+          <option value="6">Junio</option>
+          <option value="7">Julio</option>
+          <option value="8">Agosto</option>
+          <option value="9">Setiembre</option>
+          <option value="10">Octubre</option>
+          <option value="11">Noviembre</option>
+          <option value="12">Diciembre</option>
+        </select>
+        <div>
+          <button class="boton btn-cifrado" type="button" id="cifrar">Cifrar</button>
+          <button class="boton btn-decifrado" type="button" id="decifrar">Descifrar</button>
+        </div>
+        <textarea id="resultado" placeholder="Código generado."></textarea>
+        <p id="mensaje"></p>
+        <div>
+          <button class="boton btn btn-cerrar" type="button" id="cerrar">Cerrar</button>
+          <button class="boton btn btn-borrar" type="button" id="borrar">Borrar</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <footer class="site-footer contenedor centrar">
+    <h3>Copyright © 2019 All Rights Reserved. Developed by Gladys Dlc Merello.</h3>
+  </footer>
+  <script src="cipher.js"></script>
+  <script src="index.js"></script>
+</body>
+
 </html>

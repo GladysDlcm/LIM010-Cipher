@@ -44,7 +44,11 @@ Las pruebas de VIH requieren confidencialidad para proteger la identidad del pac
 
 ### Feedback
 
-En el feedback realizado se indico que se organize con más detalle la segunda pantalla de cifrar y decifrar para que el usuario pueda identificar mejor el objetivo del proyecto.
+En el feedback realizado se indicó:
+- Organizar con más detalle la segunda pantalla de cifrar y descifrar para que el usuario pueda identificar mejor el objetivo del proyecto.
+- El usuario solicito añadir el botón cerrar para reiniciar la sesión.
+- En cuanto al diseño se realizaron unos cambios en el footer respecto al diseño del prototipo.
+- Se realizaron pequeñas mejoras de organización de los elementos del formulario.
 
 
 ### Prototipo en Balsamiq

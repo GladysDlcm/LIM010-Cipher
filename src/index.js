@@ -10,65 +10,86 @@ let intentos = 0;
 
 //Enter Login
 password.addEventListener('keypress', (e) => {
-    if (e.keyCode == 13) {  
-    const nombre = usuario.value;
-    document.getElementById('hola-usuario').innerHTML = `Bienvenido  ${nombre} , los datos que ingresaras serán confidenciales.`;
-    document.getElementById('pantalla-login').classList.add('hide');
-    document.getElementById('pantalla-cifrado').classList.remove('hide');
-    }
+	if (e.keyCode == 13) {
+		const nombre = usuario.value;
+		const passIngreso = password.value;
+
+		if (intentos == 3) {        //Error 3er intento
+			document.getElementById('password').disabled = true;
+			document.getElementById('usuario').disabled = true;
+			document.getElementById('btn-enviar').disabled = true;
+			document.getElementById('error').innerHTML = 'Ya utilizaste todos tus intentos, en este momento no podrás ingresar.';
+		}
+		else {      //Contraseña correcta ingresar
+			if (passIngreso == 'LABORATORIA') {
+				document.getElementById('hola-usuario').innerHTML = `Bienvenido  ${nombre} , los datos que ingresaras serán confidenciales.`;
+				document.getElementById('pantalla-login').classList.add('hide');
+				document.getElementById('pantalla-cifrado').classList.remove('hide');
+			}
+			else {
+				if (intentos == 0) {      //Error 1er intento
+					document.getElementById('error').innerHTML = 'La contraseña es incorrecta.';
+				}
+				if (intentos == 1) {      //Error 2er intento   '
+					document.getElementById('error').innerHTML = 'La contraseña es incorrecta, intente de nuevo.';
+				}
+			}
+			intentos++;  //Cuenta intentos
+		}
+	}
 });
 //Funcionalidad Login
 btnEnviar.addEventListener('click', () => {
-const nombre = usuario.value;
-const passIngreso = password.value;
+	const nombre = usuario.value;
+	const passIngreso = password.value;
 
-    if (intentos == 2) {        //Error 3er intento
-        document.getElementById('password').disabled = true;
-        document.getElementById('usuario').disabled = true;
-        document.getElementById('btn-enviar').disabled = true;
-        document.getElementById('error').innerHTML= 'Ya utilizaste todos tus intentos, en este momento no podrás ingresar.';
-    }
-    else {      //Contraseña correcta ingresar
-        if (passIngreso == 'LABORATORIA') {   
-            document.getElementById('hola-usuario').innerHTML = `Bienvenido  ${nombre} , los datos que ingresaras serán confidenciales.`;
-            document.getElementById('pantalla-login').classList.add('hide');
-            document.getElementById('pantalla-cifrado').classList.remove('hide');
-        }
-        else {
-            if (intentos == 0){      //Error 1er intento
-                document.getElementById('error').innerHTML = 'La contraseña es incorrecta.';
-            }
-            if (intentos == 1){      //Error 2er intento   '
-                document.getElementById('error').innerHTML = 'La contraseña es incorrecta, intente de nuevo.';
-            } 
-        }  
-        intentos++;  //Cuenta intentos
-    }  
+	if (intentos == 3) {        //Error 3er intento
+		document.getElementById('password').disabled = true;
+		document.getElementById('usuario').disabled = true;
+		document.getElementById('btn-enviar').disabled = true;
+		document.getElementById('error').innerHTML = 'Ya utilizaste todos tus intentos, en este momento no podrás ingresar.';
+	}
+	else {      //Contraseña correcta ingresar
+		if (passIngreso == 'LABORATORIA') {
+			document.getElementById('hola-usuario').innerHTML = `Bienvenido  ${nombre} , los datos que ingresaras serán confidenciales.`;
+			document.getElementById('pantalla-login').classList.add('hide');
+			document.getElementById('pantalla-cifrado').classList.remove('hide');
+		}
+		else {
+			if (intentos == 0) {      //Error 1er intento
+				document.getElementById('error').innerHTML = 'La contraseña es incorrecta.';
+			}
+			if (intentos == 1) {      //Error 2er intento   '
+				document.getElementById('error').innerHTML = 'La contraseña es incorrecta, intente de nuevo.';
+			}
+		}
+		intentos++;  //Cuenta intentos
+	}
 });
 //Boton cifrar
 btnCifrar.addEventListener('click', () => {
-    let numeroMes = document.getElementById('offset').value;
-    let datosPaciente = document.getElementById('datos').value;
-    document.getElementById('resultado').innerHTML = cipher.encode(parseInt(numeroMes), datosPaciente);
-    document.getElementById('mensaje').innerHTML= 'El código se ha generado con exito.';
+	let numeroMes = document.getElementById('offset').value;
+	let datosPaciente = document.getElementById('datos').value;
+	document.getElementById('resultado').innerHTML = cipher.encode(parseInt(numeroMes), datosPaciente);
+	document.getElementById('mensaje').innerHTML = 'El código se ha generado con exito.';
 });
 //Boton decifrar
 btnDecifrar.addEventListener('click', () => {
-    let numeroMes = document.getElementById('offset').value;
-    let datosPaciente = document.getElementById('datos').value;
-    document.getElementById('resultado').innerHTML = cipher.decode(parseInt(numeroMes), datosPaciente);
-    document.getElementById('mensaje').innerHTML= 'El código se ha generado con exito.';
+	let numeroMes = document.getElementById('offset').value;
+	let datosPaciente = document.getElementById('datos').value;
+	document.getElementById('resultado').innerHTML = cipher.decode(parseInt(numeroMes), datosPaciente);
+	document.getElementById('mensaje').innerHTML = 'El código se ha generado con exito.';
 });
 //Boton borrar
 btnBorrar.addEventListener('click', () => {
-    document.getElementById('offset').value = '';
-    document.getElementById('datos').value = '';
-    document.getElementById('resultado').innerHTML = '';
-    document.getElementById('mensaje').innerHTML= ''; 
+	document.getElementById('offset').value = '';
+	document.getElementById('datos').value = '';
+	document.getElementById('resultado').innerHTML = '';
+	document.getElementById('mensaje').innerHTML = '';
 });
 //Boton cerrar
 btnCerrar.addEventListener('click', () => {
-    location.reload(true);
+	location.reload(true);
 });
 
 
