@@ -16,6 +16,10 @@ window.cipher = {
         let nuevoCaracter = ((string.charCodeAt(i) - 97 + offset) % 26 + 97);
         resultado += `${String.fromCharCode(nuevoCaracter)}`;
       }
+      else if (string.charCodeAt(i) >= 48 && string.charCodeAt(i) <= 57) {
+        let nuevoCaracter = ((string.charCodeAt(i) - 48 + offset) % 10 + 48);
+        resultado += `${String.fromCharCode(nuevoCaracter)}`;
+      }
       else {
         resultado += `${string.charAt(i)}`;
       }
@@ -37,6 +41,10 @@ window.cipher = {
       }
       else if (string.charCodeAt(i) >= 97 && string.charCodeAt(i) <= 122) {
         let nuevoCaracter = ((string.charCodeAt(i) - 97 - offset) + 52) % 26 + 97;
+        resultado += `${String.fromCharCode(nuevoCaracter)}`;
+      }
+      else if (string.charCodeAt(i) >= 48 && string.charCodeAt(i) <= 57) {
+        let nuevoCaracter = ((string.charCodeAt(i) - 8 - offset) % 10 + 48);
         resultado += `${String.fromCharCode(nuevoCaracter)}`;
       }
       else {
