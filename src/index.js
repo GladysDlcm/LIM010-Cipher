@@ -25,13 +25,12 @@ password.addEventListener('keypress', (e) => {
 				document.getElementById('hola-usuario').innerHTML = `Bienvenido  ${nombre} , los datos que ingresaras serán confidenciales.`;
 				document.getElementById('pantalla-login').classList.add('hide');
 				document.getElementById('pantalla-cifrado').classList.remove('hide');
-				//document.body.style.backgroundImage = 'url("img/bg2.jpg")';
 			}
 			else {
 				if (intentos == 0) {      //Error 1er intento
 					document.getElementById('error').innerHTML = 'La contraseña es incorrecta.';
 				}
-				if (intentos == 1) {      //Error 2er intento   '
+				if (intentos == 1) {      //Error 2er intento   
 					document.getElementById('error').innerHTML = 'La contraseña es incorrecta, intente de nuevo.';
 				}
 			}
@@ -44,14 +43,14 @@ btnEnviar.addEventListener('click', () => {
 	const nombre = usuario.value;
 	const passIngreso = password.value;
 
-	if (intentos == 3) {        //Error 3er intento
+	if (intentos === 3) {        //Error 3er intento
 		document.getElementById('password').disabled = true;
 		document.getElementById('usuario').disabled = true;
 		document.getElementById('btn-enviar').disabled = true;
 		document.getElementById('error').innerHTML = 'Ya utilizaste todos tus intentos, en este momento no podrás ingresar.';
 	}
 	else {      //Contraseña correcta ingresar
-		if (passIngreso == 'LABORATORIA') {
+		if (passIngreso === 'LABORATORIA') {
 			document.getElementById('hola-usuario').innerHTML = `Bienvenido  ${nombre} , los datos que ingresaras serán confidenciales.`;
 			document.getElementById('pantalla-login').classList.add('hide');
 			document.getElementById('pantalla-cifrado').classList.remove('hide');
@@ -60,7 +59,7 @@ btnEnviar.addEventListener('click', () => {
 			if (intentos == 0) {      //Error 1er intento
 				document.getElementById('error').innerHTML = 'La contraseña es incorrecta.';
 			}
-			if (intentos == 1) {      //Error 2er intento   '
+			if (intentos == 1) {      //Error 2er intento   
 				document.getElementById('error').innerHTML = 'La contraseña es incorrecta, intente de nuevo.';
 			}
 		}

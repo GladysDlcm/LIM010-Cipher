@@ -64,6 +64,7 @@ P{
 	padding: 30px 15px;
 	text-align: center;
 }
+
 /* Botones */
 .boton {
 	color: #ffffff;
@@ -85,11 +86,17 @@ P{
 	flex: 0 0 100%;
 	outline: transparent;
 }
-@media (min-width: 768px) {
+@media (min-width: 320px) {
 	.boton {
 			display: inline-block;
 			flex: 0 0 auto;
-			padding: .9rem 2rem;
+			padding: .9rem 1rem;
+	}
+}
+@media (min-width: 768px) {
+	.boton {
+		display: inline-block;
+		flex: 0 0 auto;
 	}
 }
 .boton:hover {
@@ -123,12 +130,7 @@ P{
 	cursor: pointer;
 	box-shadow: 0px 0px 6px 0px rgba(131,131,134,1);
 }
-@media (min-width: 768px) {
-	.btn-cifrado .btn-decifrado {
-			display: inline-block;
-			flex: 0 0 auto;
-	}
-}
+
 /* Iconos */
 .fas {
 	color: #c5c5c5;
@@ -143,6 +145,7 @@ fa-user {
 fa-lock {
 	padding-left: 35px!important;
 }
+
 /* Formulario */
 label {
 	font-weight: 700;
@@ -199,9 +202,10 @@ textarea {
 	text-align: center;
 	
 }
-@media (min-width: 768px) {
+@media (max-width: 768px) {
 	.site-footer {
 			display: block;
 			flex: 0 0 auto;
+			padding: 85px 0 30px 0;
 	}
 }
